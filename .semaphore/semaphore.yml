@@ -16,7 +16,7 @@ blocks:
       agent:
         machine:
           type: e1-standard-2
-          os_image: ubuntu2004
+          os_image: ubuntu2204
   - name: Tests
     task:
       prologue:
@@ -34,3 +34,7 @@ blocks:
         - name: Unit tests
           commands:
             - make test
+      agent:
+        machine:
+          type: e1-standard-2
+          os_image: ubuntu2204
