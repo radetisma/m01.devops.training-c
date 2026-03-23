@@ -12,7 +12,7 @@ blocks:
           commands:
             - checkout
             - make app
-            - artifact push app
+            - artifact push project app
             - echo hello
       agent:
         machine:
@@ -26,7 +26,7 @@ blocks:
       jobs:
         - name: Run app
           commands:
-            - artifact pull workflow app
+            - artifact pull project app
             - chmod +x app
             - ./app
         - name: Lint
